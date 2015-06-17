@@ -1,0 +1,17 @@
+source 'https://rubygems.org'
+ruby '2.2.1'
+gem 'hobbit'
+gem 'hobbit-hole'
+gem 'mote-angular'
+gem 'rack-protection'
+gem 'multi_json'
+gem 'bcrypt'
+gem 'pg'
+gem 'sequel'
+require 'jwt'
+group :test do
+  gem 'shotgun'
+  gem 'launchy'
+  gem 'rspec'
+  gem 'capybara'
+end
