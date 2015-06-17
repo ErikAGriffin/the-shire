@@ -1,5 +1,5 @@
 task default: %w[run_server]
 
 task :run_server do
-  sh 'rackup -q'
+    sh 'rackup -q --host 0.0.0.0'
 end

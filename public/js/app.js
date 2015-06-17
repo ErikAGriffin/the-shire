@@ -1,19 +1,34 @@
 (function() {
-  var app = angular.module('', ['ui.router','ngAnimate']);
 
-  app.config(function($stateProvider,$urlRouterProvider,$locationProvider) {
+    'use strict';
 
-    // $stateProvider
-    //   .state('stateName', {
-    //     url:'/',
-    //     controller:'Controller as ctrl',
-    //     templateUrl: '/views/partials/template.html'
-    //   });
+    require('angular');
+    require('angular-ui-router');
 
-    $urlRouterProvider.otherwise('/');
+    angular
+        .module('theShire', ['ui.router','my-module'])
+        .config(states)
+        .run(bootstrap);
 
-    $locationProvider.html5Mode(true);
-  });
+    /* @ngInject */
+    function states($stateProvider,$urlRouterProvider,$locationProvider) {
+        $stateProvider
+            .state('stateName', {
+                url:'/',
+                controller:'Controller as ctrl',
+                templateUrl: '/views/partials/template.html'
+            });
 
+        $urlRouterProvider.otherwise('/');
+        $locationProvider.html5Mode(true);
+    }
 
-}());
+    /* @ngInject */
+    function bootstrap($rootScope) {
+        $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error) {
+            console.log("!! ---- $stateChangeError. ---- !!");
+            console.log(error);
+        });
+    }
+
+})();

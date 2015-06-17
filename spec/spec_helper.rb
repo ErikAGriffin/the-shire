@@ -1,12 +1,10 @@
-ENV['VORA_DB_ENV'] = 'test'
+ENV['DB_ENV_VAR'] = 'test'
 
 require './server'
 require 'capybara/rspec'
 require 'database_cleaner'
 
 Capybara.app = Server
-
-# DB = Sequel.connect("postgres://localhost/dbname_test");
 
 RSpec.configure do |config|
 

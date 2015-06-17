@@ -6,6 +6,8 @@
 *.exe
 *.o
 *.so
+bundle.js
+
 
 # Packages #
 ############
@@ -19,6 +21,7 @@
 *.rar
 *.tar
 *.zip
+node_modules
 
 # Logs and databases #
 ######################

@@ -1,0 +1,33 @@
+{
+  "name": "the-shire",
+  "version": "1.0.0",
+  "description": "You should make your own package.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ErikAGriffin/the-shire.git"
+  },
+  "author": "Erik Griffin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErikAGriffin/the-shire/issues"
+  },
+  "homepage": "https://github.com/ErikAGriffin/the-shire",
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.2.18"
+  }
+}
