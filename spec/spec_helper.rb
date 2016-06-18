@@ -2,7 +2,6 @@ ENV['DB_ENV_VAR'] = 'test'
 
 require './server'
 require 'capybara/rspec'
-require 'database_cleaner'
 
 Capybara.app = Server
 
