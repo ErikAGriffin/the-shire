@@ -3,7 +3,6 @@
     'use strict';
 
     angular
-        .module('my-module', []);
-
+        .module('md-core', []);
 
 })();
