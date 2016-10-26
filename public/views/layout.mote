@@ -19,7 +19,7 @@
     <body>
         If you're building an angular app your probably don't need to use a templating system.
         I like to use it for the occassional passing of state from the server to the client on page load.
-
+        <br>
         ~{content}~
     </body>
 
