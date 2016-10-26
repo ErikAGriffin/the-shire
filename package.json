@@ -16,18 +16,30 @@
   },
   "homepage": "https://github.com/ErikAGriffin/the-shire",
   "devDependencies": {
-    "browserify": "^13.0.0",
-    "del": "^2.2.0",
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-ng-annotate": "^2.0.0",
-    "gulp-uglify": "^1.5.3",
-    "gulp-util": "^3.0.7",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "angular-mocks": "1.5.x",
+    "browserify": "13.0.x",
+    "del": "2.2.x",
+    "gulp": "3.9.x",
+    "gulp-clean-css": "2.0.x",
+    "gulp-concat": "2.6.x",
+    "gulp-less": "3.1.x",
+    "gulp-ng-annotate": "2.0.x",
+    "gulp-rename": "1.2.x",
+    "gulp-sourcemaps": "2.2.x",
+    "gulp-uglify": "2.0.x",
+    "gulp-util": "3.0.x",
+    "jasmine-core": "2.4.x",
+    "karma": "1.3.x",
+    "karma-chrome-launcher": "2.0.x",
+    "karma-clear-screen-reporter": "1.0.x",
+    "karma-jasmine": "1.0.x",
+    "karma-ng-html2js-preprocessor": "1.0.x",
+    "karma-phantomjs-launcher": "1.0.x",
+    "phantomjs-prebuilt": "2.1.x",
+    "vinyl-source-stream": "1.1.x"
   },
   "dependencies": {
-    "angular": "^1.5.5",
-    "angular-ui-router": "^0.2.18"
+    "angular": "1.5.x",
+    "angular-ui-router": "0.3.x"
   }
 }

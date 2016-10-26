@@ -1,3 +1,3 @@
 Gandalf my old friend, this is going to be a night to remember.
-
-<div ui-view></div>
+<!-- !!-- Set rootScope.currentState --!! -->
+<div ui-view id="{{currentState}}"></div>

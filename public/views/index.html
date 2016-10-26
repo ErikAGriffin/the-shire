@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html ng-app="">
+    <html ng-app="theShire">
         <head>
             <title></title>
             <base href="/" />
@@ -14,15 +14,17 @@
             <link rel="stylesheet" href="components/pure/grids-min.css" />
             <link rel="stylesheet" href="components/pure/grids-responsive-min.css" />
             -->
-            <link rel="stylesheet" href="styles/style.css" />
+            <link rel="stylesheet" href="styles/bundle.css" />
         </head>
     <body>
-
-        We've had one breakfast yes.  What about second breakfast?
-
-        <div ui-view></div>
+        <!-- !!-- currentState --!! -->
+        <div ui-view id="{{currentState}}"></div>
     </body>
 
     <script type="text/javascript" src="js/bundle.js"></script>
+    <script type="text/javascript">
+        // Date.now shim
+        if (!Date.now) {Date.now = function() {return new Date().getTime();}}
+    </script>
 
 </html>

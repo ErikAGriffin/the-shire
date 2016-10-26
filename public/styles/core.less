@@ -1,0 +1,73 @@
+html, body {
+    height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  line-height:1;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+h1,h2,h3,h4,h5,p {
+    margin: 0;
+}
+
+body {
+    background: black;
+    color: white;
+    text-align: center;
+    font-family: @text-font;
+    font-size: 1.4rem;
+}
+
+*[ng-click] {
+    cursor: pointer;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/* Auto-clear placeholder text */
+::-webkit-input-placeholder {color:#FFF;opacity:1;}
+:-moz-placeholder {color:#FFF;opacity:1;} /* FF 4-18 */
+::-moz-placeholder {color:#FFF;opacity:1;} /* FF 19+ */
+:-ms-input-placeholder {color:#FFF;opacity:1;} /* IE 10+ */
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+/* Opaque Placeholder Text*/
+.opaque-placeholder() {
+    &::-webkit-input-placeholder {opacity:0.6;}
+    &:-moz-placeholder {opacity:0.6;} /* FF 4-18 */
+    &::-moz-placeholder {opacity:0.6;} /* FF 19+ */
+    &:-ms-input-placeholder {opacity:0.6;} /* IE 10+ */
+}
+
+// .fill-space() {
+//     display:flex;
+//     flex-direction:column;
+// }
+
+// .valign-middle() {
+//     position:absolute;
+//     top:50%;
+//     -webkit-transform: translateY(-50%);
+//     -moz-transform: translateY(-50%);
+//     -ms-transform: translateY(-50%);
+//     -o-transform: translateY(-50%);
+//     transform: translateY(-50%);
+// }

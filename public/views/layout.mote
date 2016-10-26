@@ -14,7 +14,7 @@
             <link rel="stylesheet" href="components/pure/grids-min.css" />
             <link rel="stylesheet" href="components/pure/grids-responsive-min.css" />
             -->
-            <link rel="stylesheet" href="styles/style.css" />
+            <link rel="stylesheet" href="styles/bundle.css" />
         </head>
     <body>
         If you're building an angular app your probably don't need to use a templating system.
@@ -24,5 +24,9 @@
     </body>
 
     <script type="text/javascript" src="js/bundle.js"></script>
+    <script type="text/javascript">
+        // Date.now shim
+        if (!Date.now) {Date.now = function() {return new Date().getTime();}}
+    </script>
 
 </html>

@@ -1,13 +1,15 @@
 source 'https://rubygems.org'
 ruby '2.3.1'
+# gem 'bcrypt'
+# gem 'em-websocket'
 gem 'hobbit'
-gem 'http'
 gem 'hobbit-hole'
 gem 'mote-angular'
 gem 'rack-protection'
-gem 'bcrypt'
 gem 'pg'
 gem 'sequel'
+gem 'http'
 group :test do
   gem 'rspec'
+  gem 'rack-test'
 end
