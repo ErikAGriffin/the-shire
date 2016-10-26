@@ -5,6 +5,7 @@ task :init do
   sh 'git remote remove origin'
   sh 'bundle install'
   sh 'npm install'
+  sh 'gulp build'
   sh 'rm Rakefile'
   sh 'mv NextRakeFile Rakefile'
 end

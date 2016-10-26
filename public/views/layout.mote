@@ -17,8 +17,10 @@
             <link rel="stylesheet" href="styles/bundle.css" />
         </head>
     <body>
-        If you're building an angular app your probably don't need to use a templating system.
-        I like to use it for the occassional passing of state from the server to the client on page load.
+        <span style="font-size:0.4em;color:#555">
+            If you're building an angular app your probably don't need to use a templating system.
+            I like to use it for the occassional passing of state from the server to the client on page load.
+        </span>
         <br>
         ~{content}~
     </body>
