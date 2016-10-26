@@ -1,5 +1,38 @@
-task default: %w[run_server]
+task default: %w[start]
 
-task :run_server do
-    sh 'rackup -q --host 0.0.0.0'
+task :start do
+  sh 'rackup -q --host 0.0.0.0'
+end
+
+task :loud do
+  sh 'rackup --host 0.0.0.0'
+end
+
+task :socket do
+  sh 'bundle exec ruby socket/server.rb'
+end
+
+task :migrate do
+  db_url = ENV['SHIRE_DATABASE_URL']
+  if db_url
+    sh "sequel -m lib/migrations #{db_url}"
+  else
+    sh 'sequel -m lib/migrations postgres://localhost/the_shire_test'
+    sh 'sequel -m lib/migrations postgres://localhost/the_shire_development'
+  end
+end
+
+task :migrate_down do
+  db_url = ENV['SHIRE_DATABASE_URL']
+  if db_url
+    sh "sequel -m lib/migrations -M 0 #{db_url}"
+  else
+    sh 'sequel -m lib/migrations -M 0 postgres://localhost/the_shire_test'
+    sh 'sequel -m lib/migrations -M 0 postgres://localhost/the_shire_development'
+  end
+end
+
+task :test do
+  sh 'gulp test'
+  sh 'rspec --format documentation'
 end

@@ -1,12 +1,14 @@
 require 'hobbit'
 require 'hobbit/hole'
-require 'bcrypt'
+# require 'bcrypt'
+# require 'http'
+# require 'json'
 require './custom-hobbit'
 
 class Server < Hobbit::Base
   include Hobbit::Hole
 
-  require './lib/database_setup'
+  # require './lib/database_setup'
 
   # get '/' do
   #   render_static 'index.html'
