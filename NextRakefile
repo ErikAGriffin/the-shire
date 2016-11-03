@@ -36,3 +36,9 @@ task :test do
   sh 'gulp test'
   sh 'rspec --format documentation'
 end
+
+task :init do
+  sh 'bundle install'
+  sh 'npm install'
+  sh 'gulp build'
+end
